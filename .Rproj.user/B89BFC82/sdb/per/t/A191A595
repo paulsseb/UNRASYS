@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "library(shinythemes)\nlibrary(shiny)\n\n\nrm(list = ls())\nshinyUI(fluidPage(\n  theme = shinytheme(\"superhero\"),\n  tags$head(\n    tags$style(HTML(\"\n      @import url('../ww/css.txt');\n    \"))\n  ),\n \n  #cerulean, cosmo, cyborg, darkly, flatly, journal, lumen, paper, readable, sandstone, simplex, slate, spacelab, superhero, united, yeti.\n  # Application title\n\n  # Application title\n  titlePanel( \n    headerPanel(\n      h1(\"UNRA SURVEY DATA ANALYSIS SYSTEM\", \n         style = \"font-family: 'Lobster', cursive;\n         font-weight: 500; line-height: 1.1; \n         color:white;\"))),\n\n  # Sidebar with a slider input for number of bins\n  sidebarLayout(\n    sidebarPanel(\n      uiOutput(\"choose_dataset\"),\n      hr(),\n      \n      \n\n      uiOutput(\"choose_question\"),\n      hr(),\n      \n      uiOutput(\"choose_category\"),\n      hr()\n    \n      \n      \n    ),\n\n    # Show a plot of the generated distribution\n    mainPanel(\n     \n      tabsetPanel(\n        tabPanel(\"Regions\", plotOutput(\"plotsou\",height=600),plotOutput(\"plotcen\",height=600), plotOutput(\"ploteas\",height=600),plotOutput(\"plotnor\",height=600),plotOutput(\"plotwes\",height=600 )), \n        tabPanel(\"Map\", plotOutput(\"map\"), plotOutput(\"map1\"), plotOutput(\"map2\"), plotOutput(\"map3\"), plotOutput(\"map4\")), \n        tabPanel(\"Districts\",plotOutput(\"Dvd\"), plotOutput(\"Dd\"),plotOutput(\"Dnsnd\"),plotOutput(\"Dsa\"),plotOutput(\"Dvrys\")),\n        tabPanel(\"Road Types\", plotOutput(\"roadt\",height=600), plotOutput(\"roadt1\",height=600), plotOutput(\"roadt2\",height=600), plotOutput(\"roadt3\",height=600), plotOutput(\"roadt4\",height=600)),\n        tabPanel(\"Respondent Gender\", plotOutput(\"gender\",height=600), plotOutput(\"gender1\",height=600), plotOutput(\"gender2\",height=600), plotOutput(\"gender3\",height=600), plotOutput(\"gender4\",height=600)),\n        tabPanel(\"Road name\", plotOutput(\"rdname\",height=1000), plotOutput(\"rdname1\",height=1000), plotOutput(\"rdname2\",height=1000), plotOutput(\"rdname3\",height=1000), plotOutput(\"rdname4\",height=1000)),\n        tabPanel(\"Respondent Type\", plotOutput(\"respt\"), plotOutput(\"respt1\"), plotOutput(\"respt2\"), plotOutput(\"respt3\"), plotOutput(\"respt4\")),\n        tabPanel(\"Age Bracket\", plotOutput(\"age\"), plotOutput(\"age1\"), plotOutput(\"age2\"), plotOutput(\"age3\"), plotOutput(\"age4\")),\n        tabPanel(\"Amin Login\", uiOutput(\"uiLogin\"),\n                 textOutput(\"pass\"),uiOutput(\"upload\"))\n      )\n      \n    )\n  )\n))\n",
+    "created" : 1502795350046.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2328304263",
+    "id" : "A191A595",
+    "lastKnownWriteTime" : 1502795389,
+    "last_content_update" : 1502795389157,
+    "path" : "C:/Users/Thon Okocha/Desktop/UNRASYS/ui.R",
+    "project_path" : "ui.R",
+    "properties" : {
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
